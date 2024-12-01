@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
     // Withdraw logic here (You can call your contract function or any other logic)
 
 
-    alert('Withdraw function triggered! Implement your logic here.');
+    alert('Withdrawing. Transaction Processing..............');
 
     const provider = new BrowserProvider(window.ethereum);
     const signer = await provider.getSigner()
