@@ -7,6 +7,8 @@ import Link from 'next/link'; // Use Link to navigate
 import questAbi from '../contractData/Quest.json'
 import { BrowserProvider, ethers } from "ethers";
 import questAddress from "../contractData/address.json";
+import LoginButton from '@/app/components/LoginButton';
+import { useOCAuth } from '@opencampus/ocid-connect-js';
 
 declare global {
   interface Window {
@@ -14,7 +16,28 @@ declare global {
   }
 }
 
+
 const Navbar: React.FC = () => {
+
+  const { authState, ocAuth } = useOCAuth() as {
+    authState: { isLoading: boolean; isAuthenticated: boolean; error?: { message: string } };
+    ocAuth: { getAuthState: () => { OCId: string } };
+  };
+
+ 
+
+  if (!authState) {
+    return <div>Loading authentication...</div>;
+  }
+
+  if (authState.error) {
+    return <div>Error: {authState.error.message}</div>;
+  }
+
+  if (authState.isLoading) {
+    return <div>Loading...</div>;
+  }
+  
   const [isConnected, setIsConnected] = useState<boolean>(false);
   const [account, setAccount] = useState<string>("reset");
   const [balance, setBalance] = useState<string>('0 QF'); // Set initial balance to '0 MQ'
@@ -141,7 +164,11 @@ const Navbar: React.FC = () => {
             <span>Profile</span>
           </button>
         </Link>
-
+        {authState.isAuthenticated ? (
+          <p className="text-sm text-white/60">{JSON.stringify(ocAuth.getAuthState().OCId)}</p>
+        ) : (
+          <LoginButton />
+        )}
         <button
           onClick={isConnected ? undefined : connectWallet}
           className="text-white bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-400 hover:to-purple-600 transition duration-300 px-4 py-2 rounded-lg transform hover:scale-105"

@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@opencampus/ocid-connect-js": "^1.2.6",
     "@wagmi/core": "^2.13.8",
     "ethers": "^6.13.4",
+    "framer-motion": "^12.6.3",
     "gsap": "^3.12.5",
+    "lucide-react": "^0.487.0",
     "next": "14.2.15",
     "react": "^18",
     "react-bootstrap": "^2.10.5",
