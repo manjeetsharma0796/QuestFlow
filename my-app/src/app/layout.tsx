@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import OCConnectWrapper from '@/app/components/OCConnectorWrapper';
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,13 +26,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const opts = {
+    redirectUri: 'http://localhost:3000/redirect', // Adjust this URL
+    referralCode: 'PARTNER6', // Assign partner code
+  };
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <OCConnectWrapper opts={opts} sandboxMode={true}>
           <Navbar />
           {children}
+        </OCConnectWrapper>
+
       </body>
     </html>
   );

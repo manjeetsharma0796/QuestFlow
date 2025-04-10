@@ -8,8 +8,26 @@ import { FaBriefcase, FaCheckCircle, FaDollarSign, FaWallet } from 'react-icons/
 import Create from '../components/Create';
 import Link from 'next/link'; // Import Link from Next.js
 import Footer from '../components/Footer';
+import LoginButton from '@/app/components/LoginButton';
+import { useOCAuth } from '@opencampus/ocid-connect-js';
 
 const HomePage = () => {
+
+    const { authState, ocAuth } = useOCAuth();
+
+    // Ensure authState is defined before accessing its properties
+    if (!authState) {
+        return <div>Loading authentication...</div>;
+    }
+
+    if (authState.error) {
+        return <div>Error: {authState.error.message}</div>;
+    }
+
+    if (authState.isLoading) {
+        return <div>Loading...</div>;
+    }
+
     const heroTextRef = useRef<HTMLHeadingElement>(null);
     const welcomeTextRef = useRef<HTMLParagraphElement>(null);
 
@@ -45,7 +63,7 @@ const HomePage = () => {
 
             {/* Create and Records Section */}
             <div className="create-records-container flex flex-col md:flex-row items-center md:items-start md:justify-between md:px-6 lg:px-20 xl:px-32 mt-10 w-full space-y-8 md:space-y-0 md:space-x-4">
-                
+
                 {/* Create Section */}
                 <div className="create flex flex-col items-center md:items-start w-full md:w-[48%]">
                     <Create />
