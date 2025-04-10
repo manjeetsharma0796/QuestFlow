@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const opts = {
-    redirectUri: 'http://localhost:3000/redirect', // Adjust this URL
+    redirectUri: 'https://quest-flow-two.vercel.app/redirect', // Adjust this URL
     referralCode: 'PARTNER6', // Assign partner code
   };
   return (
