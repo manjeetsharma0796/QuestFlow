@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
           className="text-white bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-400 hover:to-purple-600 transition duration-300 px-4 py-2 rounded-lg transform hover:scale-105"
         >
         {authState.isAuthenticated ? (
-          <p className="text-white">{JSON.stringify(ocAuth.getAuthState().OCId)}</p>
+          <p className="text-white">{JSON.stringify(ocAuth.getAuthState().OCId)} 🎉</p>
         ) : (
           <LoginButton />
         )}
