@@ -11,7 +11,7 @@ const Footer: FC = () => {
                 <div className="text-center md:text-left mb-44">
                     <h1 className="text-xl font-bold text-white">Earn</h1>
                     <p className="mt-2 text-gray-400">
-                        Discover high paying crypto bounties, projects, and grants from the best Solana companies in one place and apply to them using a single profile.
+                        Discover high paying crypto bounties, projects, and grants from the best Ethereum  companies in one place and apply to them using a single profile.
                     </p>
                 </div>
 

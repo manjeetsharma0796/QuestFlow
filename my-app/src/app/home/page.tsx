@@ -113,7 +113,7 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className="opportunity-reward text-right">
-                            <p className="text-purple-500 font-bold">125 QF</p>
+                            <p className="text-purple-500 font-bold">125 QST</p>
                             {/* <p className="text-gray-400">18 comments</p> */}
                         </div>
                     </div>
@@ -131,7 +131,7 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className="opportunity-reward text-right">
-                            <p className="text-purple-500 font-bold">300 QF</p>
+                            <p className="text-purple-500 font-bold">300 QST</p>
                             {/* <p className="text-gray-400">16 comments</p> */}
                         </div>
                     </div>
@@ -149,7 +149,7 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className="opportunity-reward text-right">
-                            <p className="text-purple-500 font-bold">300 Qf</p>
+                            <p className="text-purple-500 font-bold">300 QST</p>
                             {/* <p className="text-gray-400">6 comments</p> */}
                         </div>
                     </div>

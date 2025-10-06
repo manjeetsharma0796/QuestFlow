@@ -1,38 +1,32 @@
-# Setup the project using in both client and w3_s
 
-```sh
-yarn install
-npm install
-npm start
-```
-Add this QF token as manually into your wallet on EDU Chain
+Add this QST token as manually into your wallet on U2U Mainnet
 
-Contract Address = 0x63846e146420ff19C6b870878A189A922f2b2739
+Contract Address = 0x0F5A66e004A410524473CFc68187629C891E0a20
 
-Verify this Contract -> [Verify QF](https://edu-chain-testnet.blockscout.com/token/0x63846e146420ff19C6b870878A189A922f2b2739)
+Verify this Contract -> [Verify QST](https://u2uscan.xyz/address/0x0F5A66e004A410524473CFc68187629C891E0a20)
 
 ---
 
-# About QuestFlow (build on EDU chain)
+# About QuestFlow (build on U2U Mainnet)
 
 # QuestFlow
 
-**QuestFlow**: Revolutionizing gig economy with Web3, where tasks and bounties meet the decentralized world on EDU chain.
+**QuestFlow**: Revolutionizing gig economy with Web3, where tasks and bounties meet the decentralized world on U2U Mainnet.
 
 ## Introduction
 QuestFlow is a Web3 platform designed to bridge the gap between task providers and gig enthusiasts. By leveraging blockchain technology, we ensure transparency, security, and efficiency in every transaction.
 
 ## Key Features
 1. **Post Tasks and Bounties**:
-   - Users can post tasks and set bounties by spending a QF token.
+   - Users can post tasks and set bounties by spending a QST token.
    - Ensures legitimacy and reduces spam with a token-based posting system.
 
 2. **Earn Tokens**:
    - Participants can browse through various tasks and bounties.
-   - Complete tasks to earn QF tokens or other rewards.
+   - Complete tasks to earn QST tokens or other rewards.
 
 3. **Secure and Transparent**:
-   - Built on the EDU chain, ensuring all transactions are secure and transparent.
+   - Built on the U2U Mainnet, ensuring all transactions are secure and transparent.
    - Smart contracts manage tasks and bounties, guaranteeing fair compensation.
 
 4. **Community Driven**:
@@ -40,7 +34,7 @@ QuestFlow is a Web3 platform designed to bridge the gap between task providers a
    - Encourages innovation and creativity by rewarding contributions.
 
 5. **Anti-Spam Measures**:
-   - Requiring a QF token to post tasks ensures only serious users participate.
+   - Requiring a QST token to post tasks ensures only serious users participate.
    - Helps maintain a high-quality and trustworthy environment.
 
 ## Getting Started

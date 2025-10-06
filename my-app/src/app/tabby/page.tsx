@@ -319,9 +319,9 @@ const BountyDetailPage = () => {
               />
             </label>
 
-            {/* Solana Wallet Address */}
+            {/* Ethereum  Wallet Address */}
             <label className="block mb-2">
-              Your Solana Wallet Address
+              Your Ethereum  Wallet Address
               <input
                 type="text"
                 className="mt-1 block w-full border border-gray-300 rounded-md p-2"

@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract QuestToken is ERC20 {
     // Constructor that initializes the ERC20 token with a name and symbol
-    constructor() ERC20("QUEST", "QF") {
+    constructor() ERC20("QUEST", "QST") {
         // Mint initial supply of tokens to the contract deployer's address
         // _mint(msg.sender, 1000000 * 10 ** decimals());
     }

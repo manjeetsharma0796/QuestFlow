@@ -22,7 +22,7 @@ const BountyFormPage: React.FC = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const contractAddress = '0x63846e146420ff19C6b870878A189A922f2b2739'
+        const contractAddress = '0x0F5A66e004A410524473CFc68187629C891E0a20'
         const earnedEDU = 1;
         const provider = new BrowserProvider(window.ethereum);
 
@@ -101,7 +101,7 @@ const BountyFormPage: React.FC = () => {
                     >
                         Create Bounty
                     </button>
-                    <p className='font-light text-white'>* 1 QF to confirm your post</p>
+                    <p className='font-light text-white'>* 1 QST to confirm your post</p>
                 </form>
             </div>
 

@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
 
   const [isConnected, setIsConnected] = useState<boolean>(false);
   const [account, setAccount] = useState<string>("reset");
-  const [balance, setBalance] = useState<string>('0 QF'); // Set initial balance to '0 MQ'
+  const [balance, setBalance] = useState<string>('0 QST'); // Set initial balance to '0 MQ'
   const [showPopdown, setShowPopdown] = useState<boolean>(false); // State to handle pop-down visibility
   const router = useRouter(); // Initialize the router
   const logoRef = useRef<HTMLDivElement>(null); // Ref for logo animation
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
         setIsConnected(true);
         setAccount(accounts[0]); // Store the first account address
         // Set a sample balance (You can replace this with actual balance fetching logic)
-        setBalance('10 QF');
+        setBalance('10 QST');
         // console.log('Connected account:', account);
         // console.log('Connected balance:', balance);
 
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
     // console.log(balance, "========inside withdraw===")
 
     await (await questContract.mint(account, ethers.parseUnits(parseInt(balance).toString(), 18))).wait();
-    alert('Withdraw your earned EDU coins!');
+    alert('Withdraw your earned QST coins!');
 
   };
 
@@ -164,7 +164,7 @@ const Navbar: React.FC = () => {
             <span>Profile</span>
           </button>
         </Link>
-        <button
+        {/* <button
           className="text-white bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-400 hover:to-purple-600 transition duration-300 px-4 py-2 rounded-lg transform hover:scale-105"
         >
         {authState.isAuthenticated ? (
@@ -172,7 +172,7 @@ const Navbar: React.FC = () => {
         ) : (
           <LoginButton />
         )}
-        </button>
+        </button> */}
         <button
           onClick={isConnected ? undefined : connectWallet}
           className="text-white bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-400 hover:to-purple-600 transition duration-300 px-4 py-2 rounded-lg transform hover:scale-105"
