@@ -3,7 +3,7 @@ Add this QST token as manually into your wallet on Monad Testnet
 
 Contract Address = 0xd26ca27a80d3867ef65c807d70288393d8003bcd
 
-Verify this Contract -> [Verify QST](https://u2uscan.xyz/address/0xd26ca27a80d3867ef65c807d70288393d8003bcd)
+Verify this Contract -> [Verify QST](https://monad-testnet.socialscan.io/address/0xd26ca27a80d3867ef65c807d70288393d8003bcd)
 
 ---
 
