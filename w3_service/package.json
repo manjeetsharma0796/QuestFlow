@@ -8,6 +8,7 @@
     "test": "npx hardhat test",
     "clean": "npx hardhat clean",
     "deploy:hh": "  ",
+    "deploy:storyAeneid": "npx hardhat run --network storyAeneid scripts/deploy.ts",
     "deploy:opencampus": "npx hardhat run --network opencampus scripts/deploy.ts",
     "deploy:transfer": "npx hardhat run --network aia scripts/existing_contract_use.ts",
     "deploy:edu": "npx hardhat run --network edu scripts/deploy.ts",

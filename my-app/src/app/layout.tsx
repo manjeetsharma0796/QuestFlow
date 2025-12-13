@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import OCConnectWrapper from '@/app/components/OCConnectorWrapper';
+import { Toaster } from 'sonner';
 
 
 const geistSans = localFont({
@@ -39,7 +40,12 @@ export default function RootLayout({
           <Navbar />
           {children}
         </OCConnectWrapper>
-
+        <Toaster 
+          position="bottom-right"
+          richColors
+          closeButton
+          duration={4000}
+        />
       </body>
     </html>
   );

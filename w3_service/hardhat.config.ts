@@ -45,6 +45,11 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
+    storyAeneid: {
+      url: 'https://rpc.ankr.com/story_aeneid_testnet',
+      chainId: 1315,
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
     opencampus: {
       url: `https://rpc.open-campus-codex.gelato.digital`,
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
