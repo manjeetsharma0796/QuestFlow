@@ -45,9 +45,9 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
-    storyAeneid: {
-      url: 'https://rpc.ankr.com/story_aeneid_testnet',
-      chainId: 1315,
+    mantleTestnet: {
+      url: 'https://rpc.sepolia.mantle.xyz',
+      chainId: 5003,
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
     opencampus: {
