@@ -1,5 +1,5 @@
 import { BrowserProvider, JsonRpcProvider, FallbackProvider } from 'ethers';
-import { STORY_AENEID_TESTNET } from '../config/network';
+import { DEFAULT_NETWORK } from '../config/network';
 
 /**
  * Creates a provider with fallback RPC endpoints for better reliability
@@ -11,7 +11,7 @@ export const createProvider = () => {
   }
   
   // Fallback: Create a provider with multiple RPC endpoints
-  const providers = STORY_AENEID_TESTNET.rpcUrls.map(
+  const providers = DEFAULT_NETWORK.rpcUrls.map(
     (url) => new JsonRpcProvider(url)
   );
   

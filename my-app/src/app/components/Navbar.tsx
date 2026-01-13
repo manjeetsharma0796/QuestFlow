@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
   const logoRef = useRef<HTMLDivElement>(null); // Ref for logo animation
   const [quest, setQuest] = useState<ethers.Contract | undefined>(undefined);
 
-  const switchToStoryAeneid = useCallback(async () => {
+  const switchToMantle = useCallback(async () => {
     if (!window.ethereum) return;
 
     try {
@@ -78,18 +78,18 @@ const Navbar: React.FC = () => {
               });
               
               toast.success('Network added!', {
-                description: 'Story Aeneid Testnet has been added to your wallet.',
+                description: 'Mantle Testnet has been added to your wallet.',
               });
             } catch (addError: any) {
-              console.error('Failed to add Story Aeneid testnet:', addError);
+              console.error('Failed to add Mantle testnet:', addError);
               toast.error('Failed to add network', {
-                description: 'Please add Story Aeneid Testnet manually in MetaMask settings.',
+                description: 'Please add Mantle Testnet manually in MetaMask settings.',
               });
             }
           } else {
-            console.error('Failed to switch to Story Aeneid testnet:', switchError);
+            console.error('Failed to switch to Mantle testnet:', switchError);
             toast.warning('Network switch failed', {
-              description: 'Please switch to Story Aeneid Testnet manually.',
+              description: 'Please switch to Mantle Testnet manually.',
             });
           }
         }
@@ -166,8 +166,8 @@ const Navbar: React.FC = () => {
       if (typeof window.ethereum !== 'undefined') {
         console.log('MetaMask is installed!');
         
-        // Switch to Story Aeneid testnet on component mount
-        await switchToStoryAeneid();
+        // Switch to Mantle testnet on component mount
+        await switchToMantle();
 
         // Verify wallet connection with MetaMask (this will update state if different)
         await checkWalletConnection();
@@ -191,7 +191,7 @@ const Navbar: React.FC = () => {
     };
 
     initializeWallet();
-  }, [switchToStoryAeneid, checkWalletConnection, handleAccountsChanged, handleChainChanged]);
+  }, [switchToMantle, checkWalletConnection, handleAccountsChanged, handleChainChanged]);
 
   // Save wallet state to localStorage whenever it changes
   useEffect(() => {
@@ -209,8 +209,8 @@ const Navbar: React.FC = () => {
   const connectWallet = async () => {
     if (window.ethereum) {
       try {
-        // Switch to Story Aeneid testnet before connecting
-        await switchToStoryAeneid();
+        // Switch to Mantle testnet before connecting
+        await switchToMantle();
         
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         if (accounts.length > 0) {
